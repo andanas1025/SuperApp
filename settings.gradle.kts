@@ -21,3 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "SuperAppExample"
 include(":app")
+include(":utilities")
