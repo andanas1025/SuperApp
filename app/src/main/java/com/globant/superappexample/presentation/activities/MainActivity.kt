@@ -1,4 +1,4 @@
-package com.globant.superappexample
+package com.globant.superappexample.presentation.activities
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -12,7 +12,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
-import com.globant.superappexample.ui.theme.SuperAppExampleTheme
+import com.globant.superappexample.presentation.ui.theme.SuperAppExampleTheme
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
