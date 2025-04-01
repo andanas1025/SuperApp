@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="Theme.SuperAppExample" parent="android:Theme.Material.Light.NoActionBar" />
+    <style name="Theme.SuperAppExample" parent="Theme.MaterialComponents.Light.NoActionBar" />
 
     <style name="SplashScreenTheme" parent="Theme.SplashScreen">
         <item name="windowSplashScreenBackground">@color/white</item>
