@@ -73,6 +73,9 @@ dependencies {
     implementation(libs.hilt)
     kapt(libs.hilt.compiler)
     implementation(libs.hilt.navigation.compose)
-
+//    implementation(libs.coil)
+//    implementation(libs.coil.network)
+    implementation(libs.coil.compose)
+    implementation(libs.coil.network.okhttp)
     implementation(libs.splash.screen)
 }
