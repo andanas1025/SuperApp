@@ -60,7 +60,7 @@ fun AppToolbar() {
 fun AppToolbarPreview() {
     SuperAppExampleTheme {
         Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-            AppToolbar(innerPadding)
+            AppToolbar()
         }
     }
 }
