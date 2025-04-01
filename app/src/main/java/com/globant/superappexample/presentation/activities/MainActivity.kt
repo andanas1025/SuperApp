@@ -12,6 +12,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.globant.superappexample.presentation.components.AppToolbar
+import com.globant.superappexample.presentation.screens.AppNavGraph
 import com.globant.superappexample.presentation.ui.theme.SuperAppExampleTheme
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -23,9 +24,7 @@ class MainActivity : ComponentActivity() {
         installSplashScreen()
         setContent {
             SuperAppExampleTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    AppToolbar()
-                }
+                AppNavGraph()
             }
         }
     }
