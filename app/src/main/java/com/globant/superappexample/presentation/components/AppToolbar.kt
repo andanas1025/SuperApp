@@ -2,6 +2,7 @@ package com.globant.superappexample.presentation.components
 
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -22,12 +23,12 @@ import com.globant.superappexample.R
 import com.globant.superappexample.presentation.ui.theme.SuperAppExampleTheme
 
 @Composable
-fun AppToolbar(innerPadding: PaddingValues) {
+fun AppToolbar() {
     Row(
         modifier = Modifier
             .fillMaxWidth()
             .height(70.dp)
-            .padding(innerPadding),
+            .padding(18.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
         Icon(
@@ -42,6 +43,14 @@ fun AppToolbar(innerPadding: PaddingValues) {
             textValue = stringResource(R.string.add_address),
             modifier = Modifier.wrapContentSize(),
             fontSizeValue = 20.sp
+        )
+
+        Spacer(modifier = Modifier.weight(1f))
+
+        Icon(
+            modifier = Modifier.size(40.dp),
+            painter = painterResource(id = R.drawable.ic_inventory_app),
+            contentDescription = "Icon image"
         )
     }
 }

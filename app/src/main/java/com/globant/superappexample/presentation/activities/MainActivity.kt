@@ -24,7 +24,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             SuperAppExampleTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    AppToolbar(innerPadding)
+                    AppToolbar()
                 }
             }
         }
