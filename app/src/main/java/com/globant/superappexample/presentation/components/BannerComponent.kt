@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.runtime.Composable
@@ -30,7 +31,8 @@ fun BannerComponent(
     Box(
         modifier = Modifier
             .fillMaxWidth()
-            .height(240.dp)
+            .wrapContentHeight()
+            .size(240.dp)
             .padding(12.dp)
             .clip(
                 shape = RoundedCornerShape(12.dp)
@@ -38,7 +40,7 @@ fun BannerComponent(
     ) {
         image?.let {
             AsyncImage(
-                modifier = Modifier.fillMaxSize(),
+                modifier = Modifier.fillMaxWidth(),
                 model = it,
                 contentDescription = "Banner image",
                 contentScale = ContentScale.Crop
@@ -55,7 +57,8 @@ fun BannerComponent(
         }
         Column(
             modifier = Modifier
-                .fillMaxSize()
+                .fillMaxWidth()
+                .wrapContentHeight()
                 .padding(18.dp),
             horizontalAlignment = Alignment.Start,
             verticalArrangement = Arrangement.Top
@@ -66,7 +69,7 @@ fun BannerComponent(
                         .wrapContentSize(),
                     textValue = it,
                     fontSizeValue = 24.sp,
-                    paddingValue = 8.dp
+                    paddingValue = 0.dp
                 )
             }
 
@@ -75,7 +78,7 @@ fun BannerComponent(
                     modifier = Modifier
                         .wrapContentSize(),
                     textValue = it,
-                    paddingValue = 8.dp
+                    paddingValue = 0.dp
                 )
             }
         }
