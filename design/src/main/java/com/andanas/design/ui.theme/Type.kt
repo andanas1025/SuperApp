@@ -1,4 +1,4 @@
-package com.globant.superappexample.presentation.ui.theme
+package com.andanas.design.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

@@ -1,4 +1,4 @@
-package com.globant.superappexample.presentation.components
+package com.andanas.design.components
 
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Text
@@ -11,7 +11,7 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.globant.superappexample.presentation.ui.theme.blackColor
+import com.andanas.design.ui.theme.blackColor
 
 @Composable
 fun TextComponent(

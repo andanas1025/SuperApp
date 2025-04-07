@@ -23,3 +23,4 @@ rootProject.name = "SuperAppExample"
 include(":app")
 include(":utilities")
 include(":wealthy")
+include(":design")

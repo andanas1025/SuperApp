@@ -11,9 +11,9 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.globant.superappexample.R
-import com.globant.superappexample.presentation.components.AppToolbar
-import com.globant.superappexample.presentation.components.BannerComponent
-import com.globant.superappexample.presentation.ui.theme.whiteColor
+import com.andanas.design.components.AppToolbar
+import com.andanas.design.components.BannerComponent
+import com.andanas.design.ui.theme.whiteColor
 
 @Composable
 fun HomeScreen() {

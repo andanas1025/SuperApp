@@ -1,4 +1,4 @@
-package com.globant.superappexample.presentation.components
+package com.andanas.design.components
 
 import androidx.compose.foundation.Image
 import androidx.compose.runtime.Composable
