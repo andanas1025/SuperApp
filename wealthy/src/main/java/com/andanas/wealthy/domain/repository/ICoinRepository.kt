@@ -1,4 +1,4 @@
-package com.andanas.wealthy.data.remote.repository
+package com.andanas.wealthy.domain.repository
 
 import com.andanas.wealthy.domain.model.Coin
 import com.andanas.wealthy.domain.model.CoinDetail
