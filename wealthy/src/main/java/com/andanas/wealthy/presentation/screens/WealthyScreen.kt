@@ -16,13 +16,16 @@ import com.andanas.design.ui.theme.whiteColor
 import com.andanas.wealthy.R
 
 @Composable
-fun WealthyScreenApp() {
+fun WealthyScreenApp(
+    primaryButtonClicked: () -> Unit = {}
+) {
     Scaffold(
         topBar = {
             AppToolbar(
                 stringResource(R.string.wealthy_title),
                 isBackButtonVisible = true,
-                isNotificationVisible = true
+                isNotificationVisible = true,
+                primaryButtonClicked = primaryButtonClicked
             )
         }
     ) { innerPadding ->
