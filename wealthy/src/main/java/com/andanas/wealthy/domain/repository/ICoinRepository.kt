@@ -5,7 +5,7 @@ import com.andanas.wealthy.domain.model.CoinDetail
 import com.globant.utilities.Resource
 import kotlinx.coroutines.flow.Flow
 
-interface iCoinRepository {
+interface ICoinRepository {
 
     suspend fun getCoins(): Flow<Resource<List<Coin>>>
 
