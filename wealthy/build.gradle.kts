@@ -49,6 +49,7 @@ android {
 dependencies {
 
     implementation(project(":design"))
+    implementation(project(":utilities"))
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
@@ -74,4 +75,8 @@ dependencies {
 //    implementation(libs.coil.network)
     implementation(libs.coil.compose)
     implementation(libs.coil.network.okhttp)
+    implementation(libs.retrofit)
+    implementation(libs.retrofit.converter.gson)
+    implementation(libs.okhttp3)
+    implementation(libs.okhttp3.logging.interceptor)
 }
