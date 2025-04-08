@@ -14,3 +14,15 @@ data class CoinDto(
     val isActive: Boolean,
     val type: String
 )
+
+fun CoinDto.toCoin(): Coin {
+    return Coin(
+        id = id,
+        name = name,
+        symbol = symbol,
+        rank = rank,
+        isNew = isNew,
+        isActive = isActive,
+        type = type
+    )
+}

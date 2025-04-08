@@ -1,5 +1,7 @@
 package com.andanas.wealthy.data.remote.dto
 
+import com.andanas.wealthy.domain.model.CoinDetail
+
 data class CoinDetailDto(
     val contract: String,
     val contracts: List<Contract>,
@@ -30,3 +32,36 @@ data class CoinDetailDto(
     val type: String,
     val whitepaper: Whitepaper
 )
+
+fun CoinDetailDto.toCoinDetail(): CoinDetail {
+    return CoinDetail(
+        id = id,
+        name = name,
+        description = description,
+        symbol = symbol,
+        rank = rank,
+        is_active = is_active,
+        is_new = is_new,
+        type = type,
+        contract = TODO(),
+        contracts = TODO(),
+        development_status = TODO(),
+        first_data_at = TODO(),
+        hardware_wallet = TODO(),
+        hash_algorithm = TODO(),
+        last_data_at = TODO(),
+        links = TODO(),
+        links_extended = TODO(),
+        logo = TODO(),
+        message = TODO(),
+        open_source = TODO(),
+        org_structure = TODO(),
+        parent = TODO(),
+        platform = TODO(),
+        proof_type = TODO(),
+        started_at = TODO(),
+        tags = TODO(),
+        team = TODO(),
+        whitepaper = TODO()
+    )
+}
