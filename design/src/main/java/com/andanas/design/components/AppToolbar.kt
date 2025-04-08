@@ -1,6 +1,7 @@
 package com.andanas.design.components
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -26,7 +27,8 @@ import com.andanas.design.ui.theme.whiteColor
 fun AppToolbar(
     title: String = stringResource(R.string.add_address),
     isBackButtonVisible: Boolean = false,
-    isNotificationVisible: Boolean = false
+    isNotificationVisible: Boolean = false,
+    primaryButtonClicked: () -> Unit = {}
 ) {
     Row(
         modifier = Modifier
@@ -38,10 +40,14 @@ fun AppToolbar(
         verticalAlignment = Alignment.CenterVertically
     ) {
         Icon(
-            modifier = Modifier.size(28.dp),
+            modifier = Modifier
+                .size(28.dp)
+                .clickable {
+                    if (isBackButtonVisible) primaryButtonClicked()
+                },
             painter = painterResource(id = if (isBackButtonVisible) R.drawable.ic_arrow_back else R.drawable.ic_inventory_app),
             contentDescription = if (isBackButtonVisible) "back button" else "Icon image",
-            tint = whiteColor
+            tint = whiteColor,
         )
         SpaceWidth()
         TextComponent(

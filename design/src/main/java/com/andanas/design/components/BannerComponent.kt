@@ -1,5 +1,6 @@
 package com.andanas.design.components
 
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -24,12 +25,16 @@ fun BannerComponent(
     title: String? = null,
     description: String? = null,
     image: String? = null,
-    resourceValue: Int? = null
+    resourceValue: Int? = null,
+    bannerClicked: () -> Unit = {}
 ) {
     Box(
         modifier = Modifier
             .fillMaxWidth()
             .wrapContentHeight()
+            .clickable {
+                bannerClicked()
+            }
             .size(240.dp)
             .padding(12.dp)
             .clip(
