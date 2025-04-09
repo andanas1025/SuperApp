@@ -17,6 +17,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import com.andanas.design.components.AppToolbar
 import com.andanas.design.ui.theme.whiteColor
 import com.andanas.wealthy.R
+import com.andanas.wealthy.presentation.components.CoinListItem
 
 @Composable
 fun WealthyScreenApp(
@@ -45,7 +46,7 @@ fun WealthyScreenApp(
                 modifier = Modifier.fillMaxSize()
             ) {
                 items(state.coins) { coin ->
-
+                    CoinListItem(coin)
                 }
             }
         }
