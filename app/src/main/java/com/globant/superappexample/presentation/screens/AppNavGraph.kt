@@ -7,7 +7,7 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.andanas.wealthy.presentation.screens.WealthyScreenApp
+import com.andanas.wealthy.presentation.screens.wealthyHome.WealthyScreenApp
 import com.globant.superappexample.presentation.screens.home.HomeScreen
 
 @Composable

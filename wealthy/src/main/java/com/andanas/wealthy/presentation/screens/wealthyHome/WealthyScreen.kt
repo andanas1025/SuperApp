@@ -1,4 +1,4 @@
-package com.andanas.wealthy.presentation.screens
+package com.andanas.wealthy.presentation.screens.wealthyHome
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
