@@ -1,6 +1,8 @@
 package com.andanas.wealthy.di
 
 import com.andanas.wealthy.data.remote.CoinApi
+import com.andanas.wealthy.data.repository.CoinRepositoryImpl
+import com.andanas.wealthy.domain.repository.ICoinRepository
 import com.globant.utilities.constants.AppConstants
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -37,5 +39,11 @@ class WealthModule {
             .client(httpClient.build())
             .build()
             .create(CoinApi::class.java)
+    }
+
+    @Provides
+    @Singleton
+    fun providesCoinRepository(api: CoinApi): ICoinRepository {
+        return CoinRepositoryImpl(api)
     }
 }
