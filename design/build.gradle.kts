@@ -56,4 +56,10 @@ dependencies {
     implementation(libs.androidx.material3)
     implementation(libs.coil.compose)
     implementation(libs.coil.network.okhttp)
+    implementation(libs.androidx.foundation.layout.android)
+    implementation(libs.androidx.transition)
+    implementation(libs.androidx.foundation.layout.android)
+    implementation(libs.androidx.foundation.layout.android)
+    implementation(libs.androidx.constraintlayout.compose)
+    debugImplementation(libs.ui.tooling)
 }

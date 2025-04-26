@@ -4,11 +4,14 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.compose.foundation.layout.Column
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import com.andanas.design.components.AlertDialogComponent
+import com.andanas.design.components.ErrorComponent
 import com.globant.superappexample.presentation.screens.AppNavGraph
 import com.andanas.design.ui.theme.SuperAppExampleTheme
 import dagger.hilt.android.AndroidEntryPoint
@@ -39,6 +42,11 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 @Composable
 fun GreetingPreview() {
     SuperAppExampleTheme {
-        Greeting("Android")
+        Column {
+            Greeting("Android")
+            ErrorComponent {  }
+//            AlertDialogComponent { }
+        }
     }
 }
+

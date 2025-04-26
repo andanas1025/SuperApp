@@ -5,6 +5,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.platform.LocalInspectionMode
 
 private val DarkColorScheme = darkColorScheme(
     primary = primaryColor,
@@ -35,15 +36,22 @@ fun SuperAppExampleTheme(
     dynamicColor: Boolean = false,
     content: @Composable () -> Unit
 ) {
+    val isPreview = LocalInspectionMode.current
     val colorScheme = if (darkTheme) {
         DarkColorScheme
     } else {
         LightColorScheme
     }
-
-    MaterialTheme(
-        colorScheme = colorScheme,
-        typography = Typography,
-        content = content
-    )
+    if (isPreview) {
+        MaterialTheme(
+            colorScheme = lightColorScheme(), // fallback palette
+            content = content
+        )
+    } else {
+        MaterialTheme(
+            colorScheme = colorScheme,
+            typography = Typography,
+            content = content
+        )
+    }
 }
