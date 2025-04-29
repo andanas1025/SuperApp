@@ -80,4 +80,5 @@ dependencies {
     implementation(libs.coil.compose)
     implementation(libs.coil.network.okhttp)
     implementation(libs.splash.screen)
+    implementation(libs.navigation.compose)
 }
