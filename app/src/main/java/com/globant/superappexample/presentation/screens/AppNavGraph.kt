@@ -20,7 +20,14 @@ fun AppNavGraph() {
         modifier = Modifier.fillMaxSize()
     ) {
         NavHost(navController, startDestination = ScreenRoute.HomeScreen.route) {
-            composable(route = ScreenRoute.HomeScreen.route) {
+            composable(route = ScreenRoute.HomeScreen.route,
+                popEnterTransition = {
+                    slideIntoContainer(
+                        AnimatedContentTransitionScope.SlideDirection.Right,
+                        tween(500)
+                    )
+                }
+            ) {
                 HomeScreen(
                     primaryButtonClicked = {
 
