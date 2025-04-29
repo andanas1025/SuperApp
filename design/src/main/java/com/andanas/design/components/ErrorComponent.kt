@@ -18,7 +18,7 @@ fun ErrorComponent(
     modifier: Modifier = Modifier,
     errorText: String = "An error has occurred",
     errorButtonText: String = "Retry",
-    onRetry: () -> Unit
+    onRetry: () -> Unit = {}
 ) {
     Surface(modifier = modifier) {
         Column(
